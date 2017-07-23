@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Should I Work from Home?</title>
+  </head>
+  <body>
+    <h1>Answer some questions:</h1>
+      <form action="api/formaverage" method="post" enctype="application/json">
+        {{range $index, $element := .}}
+        <p>{{.Statement}}</p>
+          <input type="radio" name="{{ $index }}" value="1"> 1
+          <input type="radio" name="{{ $index }}" value="2"> 2
+          <input type="radio" name="{{ $index }}" value="3"> 3
+          <input type="radio" name="{{ $index }}" value="4"> 4
+          <input type="radio" name="{{ $index }}" value="5"> 5
+          <input type="radio" name="{{ $index }}" value="6"> 6
+          <input type="radio" name="{{ $index }}" value="7"> 7
+          <input type="radio" name="{{ $index }}" value="8"> 8
+          <input type="radio" name="{{ $index }}" value="9"> 9
+          <input type="radio" name="{{ $index }}" value="10"> 10
+          <br/>
+          <br/>
+        {{end}}
+        <input type="submit" value="Submit">
+      </form>
+  </body>
+</html>
